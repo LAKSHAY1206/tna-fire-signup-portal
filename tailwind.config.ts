@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				esports: {
+					"dark-blue": "#0A1128",
+					"blue": "#1282A2",
+					"orange": "#FF6B35",
+					"red": "#D64045",
+					"dark": "#1A1A2E",
+					"gray": "#16213E"
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 10px rgba(255, 107, 53, 0.7), 0 0 20px rgba(255, 107, 53, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 15px rgba(255, 107, 53, 0.9), 0 0 30px rgba(255, 107, 53, 0.7)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s infinite',
+				'slide-in': 'slide-in 0.6s ease-out'
+			},
+			backgroundImage: {
+				'hero-pattern': "linear-gradient(to bottom, rgba(26, 26, 46, 0.7), rgba(10, 17, 40, 0.9)), url('/esports-bg.jpg')",
+				'card-gradient': "linear-gradient(135deg, rgba(22, 33, 62, 0.8), rgba(10, 17, 40, 0.9))"
 			}
 		}
 	},
